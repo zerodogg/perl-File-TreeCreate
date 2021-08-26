@@ -131,6 +131,40 @@ File::TreeCreate - recursively create a directory tree.
 
 =head1 SYNOPSIS
 
+    use File::TreeCreate ();
+
+    my $t = File::TreeCreate->new();
+
+    my $tree = {
+        'name' => "tree-create--tree-test-1/",
+        'subs' => [
+            {
+                'name'     => "b.doc",
+                'contents' => "This file was spotted in the wild.",
+            },
+            {
+                'name' => "a/",
+            },
+            {
+                'name' => "foo/",
+                'subs' => [
+                    {
+                        'name' => "yet/",
+                    },
+                ],
+            },
+        ],
+    };
+
+    $t->create_tree( "./t/sample-data/", $tree );
+
+    # TEST
+    is_deeply(
+        $t->ls("./t/sample-data/tree-create--tree-test-1"),
+        [ "a", "b.doc", "foo" ],
+        "Testing the contents of the root tree"
+    );
+
 =head1 DESCRIPTION
 
 =head1 METHODS

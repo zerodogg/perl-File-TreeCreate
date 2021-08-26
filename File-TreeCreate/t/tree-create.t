@@ -5,9 +5,9 @@ use warnings;
 
 use Test::More tests => 22;
 
-use File::Path;
+use File::Path qw( rmtree mkpath );
 
-use File::TreeCreate;
+use File::TreeCreate ();
 
 {
     my $t = File::TreeCreate->new();
