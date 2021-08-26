@@ -167,6 +167,9 @@ File::TreeCreate - recursively create a directory tree.
 
 =head1 DESCRIPTION
 
+This module was extracted from several near-identical copies used in the tests
+of some of my CPAN distributions.
+
 =head1 METHODS
 
 =head2 $obj->cat($path)
