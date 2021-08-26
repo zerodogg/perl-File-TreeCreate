@@ -122,3 +122,21 @@ sub _real_create_tree
 }
 
 1;
+
+=encoding utf8
+
+=head1 NAME
+
+File::TreeCreate - recursively create a directory tree.
+
+=head1 SYNOPSIS
+
+=head1 DESCRIPTION
+
+=head1 METHODS
+
+=head2
+
+=head2
+
+=cut
