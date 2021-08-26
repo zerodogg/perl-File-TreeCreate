@@ -135,8 +135,36 @@ File::TreeCreate - recursively create a directory tree.
 
 =head1 METHODS
 
-=head2
+=head2 $obj->cat($path)
 
-=head2
+Slurp the file.
+
+=head2 $obj->create_tree($unix_init_path, $tree)
+
+create the tree.
+
+=head2 $obj->exist($path)
+
+Does the path exist
+
+=head2 $obj->get_path($path)
+
+Canonicalize the path from UNIX-like.
+
+=head2 $obj->is_dir($path)
+
+is the path a directory.
+
+=head2 $obj->is_file($path)
+
+is the path a file.
+
+=head2 $obj->ls($dir_path)
+
+list files in a directory
+
+=head2 my $obj = File::TreeCreate->new()
+
+Instantiates a new object.
 
 =cut
